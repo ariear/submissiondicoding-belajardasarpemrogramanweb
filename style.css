@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* nav */
+nav{
+    z-index: 20;
+    top: 0;
+    width: 100vw;
+    position: fixed;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 25px 0;
+    transition: .3s all ease;
+}
+nav h2 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+}
+.nav-scroll{
+    background-color: white;
+    padding: 18px 0;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.15);
+}
+.list-nav{
+    display: flex;
+    align-items: center;
+    font-family: 'Inter', sans-serif;
+}
+.list-nav li {
+    list-style: none;
+    margin-right: 20px;
+}
+
+@media screen and (max-width: 425px) {
+    nav{
+        box-sizing: border-box;
+        justify-content: space-between;
+        padding: 25px 20px;
+    }
+    nav h2 {
+        font-size: 20px;
+    }
+    .nav-scroll{
+        padding: 18px 15px;
+    }
+    .list-nav{
+        display: none;
+    }
+}
+
+/* nav mobile */
+.hamburger-menu{
+    display: none;
+}
+.list-nav-mobile{
+    display: none;
+}
+.bg-list-nav-mobile{
+    display: none;
+}
+@media screen and (max-width: 425px) {
+    .hamburger-menu{
+        display: block;
+    }
+    .list-nav-mobile{
+        background-color: white;
+        top: 0;
+        right: 0;
+        width: 0;
+        min-height: 100vh;
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        transition: .3s all ease;
+    }
+    .click-list-nav-mobile{
+        width: 70vw;
+    }
+    .list-nav-mobile li {
+        font-family: 'Inter', sans-serif;
+        list-style: none;
+        margin: 10px 0;
+    }
+    .bg-list-nav-mobile{
+        display: block;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 0;
+        min-height: 100vh;
+        background-color: rgba(0, 0, 0, 0.514);
+        transition: .3s all ease;
+    }
+    .click-bg-list-nav-mobile{
+        width: 100vw;
+    }
+}
+/* nav mobile */
+
+/* end nav */
+
+
+/* main container */
+.main-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.left-main-container{
+    width: 420px;
+    margin-right: 60px;
+}
+.left-main-container h1 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+.left-main-container p {
+    font-family: 'Inter', sans-serif;
+}
+.left-main-container button{
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    margin-top: 30px;
+    padding: 14px 25px;
+    border: none;
+    background-color: #8EADD5;
+    color: white;
+    border-radius: 10px;
+}
+@media screen and (max-width: 768px) {
+    .left-main-container{
+        width: 75vw;
+        text-align: center;
+        margin-right: 0;
+    }
+    .right-main-container{
+        display: none;
+    }
+}
+@media screen and (max-width: 425px) {
+    .main-gradient{
+        display: none;
+    }
+    .left-main-container{
+        width: 90vw;
+    }
+    .left-main-container h1 {
+        font-size: 38px;
+    }
+}
+
+.main-gradient{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 500px;
+    height: 350px;
+    background: conic-gradient(from 180deg at 50% 50%, #2f6bb9 0deg , rgba(196,196,196,0) 360deg);
+    opacity: 0.5;
+    filter: blur(80px);
+}
+/* end main container */
+
+/* truested */
+#trusted{
+    padding: 30px 0;
+}
+#trusted p{
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    color: #667085;
+    text-align: center;
+    margin-bottom: 15px;
+}
+#trusted .trusted-logo{
+    background-color: #F6F6F6;
+    margin: 0 auto;
+    padding: 20px 0;
+    width: 70vw;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 15px;
+}
+@media screen and (max-width: 768px) {
+    #trusted .trusted-logo{
+        width: 95vw;
+    }
+}
+/* end truested */
