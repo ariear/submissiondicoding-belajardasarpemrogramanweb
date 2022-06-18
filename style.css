@@ -3,6 +3,7 @@
 *{
     margin: 0;
     padding: 0;
+    scroll-behavior: smooth;
 }
 
 /* nav */
@@ -16,6 +17,7 @@ nav{
     align-items: center;
     padding: 25px 0;
     transition: .3s all ease;
+    color: #272D38;
 }
 nav h2 {
     font-family: 'Inter', sans-serif;
@@ -32,8 +34,30 @@ nav h2 {
     font-family: 'Inter', sans-serif;
 }
 .list-nav li {
+    position: relative;
     list-style: none;
     margin-right: 20px;
+}
+.list-nav li::after{
+    content: '';
+    width: 0;
+    border: 1px solid;
+    border-color: white;
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    transition: .3s all ease;
+}
+.list-nav li:hover::after{
+    border-color: #272D38;
+    width: 100%;
+}
+.list-nav li a {
+    color: #272D38;
+    text-decoration: none;
+}
+.list-nav li a:focus {
+    font-weight: 700;
 }
 
 @media screen and (max-width: 425px) {
@@ -125,6 +149,7 @@ nav h2 {
     font-weight: 700;
     font-size: 50px;
     margin-bottom: 20px;
+    color: #272D38;
 }
 .left-main-container p {
     font-family: 'Inter', sans-serif;
@@ -138,6 +163,20 @@ nav h2 {
     background-color: #8EADD5;
     color: white;
     border-radius: 10px;
+}
+.right-main-container img{
+    width: 450px;
+}
+@media screen and (min-width: 1441px) {
+    .left-main-container{
+        width: 600px;
+    }
+    .left-main-container h1{
+        font-size: 60px;
+    }
+    .right-main-container img{
+        width: 600px;
+    }
 }
 @media screen and (max-width: 768px) {
     .left-main-container{
@@ -153,11 +192,22 @@ nav h2 {
     .main-gradient{
         display: none;
     }
+    .main-container{
+        flex-direction: column;
+    }
     .left-main-container{
         width: 90vw;
+        padding-top: 70px;
+        margin-bottom: 30px;
     }
     .left-main-container h1 {
         font-size: 38px;
+    }
+    .right-main-container{
+        display: inline;
+    }
+    .right-main-container img{
+        width: 85vw;
     }
 }
 
@@ -176,6 +226,7 @@ nav h2 {
 /* truested */
 #trusted{
     padding: 30px 0;
+    margin-bottom: 50px;
 }
 #trusted p{
     font-family: 'Inter', sans-serif;
@@ -201,3 +252,225 @@ nav h2 {
     }
 }
 /* end truested */
+
+/* services */
+#services h1{
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 30px;
+    text-align: center;
+    padding-top: 40px;
+    margin-bottom: 40px;
+}
+.child-services{
+    padding: 0 20px;
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.child-services-content{
+    width: 470px;
+}
+.child-services-content h2{
+    color: #272D38;
+    font-size: 45px;
+    margin-bottom: 30px;
+}
+.child-services-content p {
+    margin-bottom: 30px;
+}
+.child-services-image img{
+    width: 450px;
+}
+@media screen and (min-width: 1441px) {
+    .child-services-content{
+        width: 500px;
+    }
+    .child-services-content h2 {
+        font-size: 55px;
+    }
+    .child-services-image img{
+        width: 450px;
+    }
+}
+@media screen and (max-width: 1024px) {
+    .child-services-image img{
+        width: 380px;
+    }
+    .child-services-content{
+        width: 390px;
+    }
+    .child-services-content h2 {
+        font-size: 40px;
+    }
+}
+@media screen and (max-width: 768px) {
+    .child-services-image {
+        display: none;
+    }
+    .child-services-content{
+        margin-bottom: 50px;
+    }
+}
+@media screen and (max-width: 425px) {
+    #services h1 {
+        font-size: 25px;
+    }
+    .child-services-content{
+        width: 90vw;
+    }
+    .child-services-content h2 {
+        font-size: 35px;
+    }
+}
+/* end services */
+
+/* Testimony */
+#testimony {
+    font-family: 'Inter', sans-serif;
+    padding: 50px 0;
+    text-align: center;
+    color: #272D38;
+}
+#testimony h1{
+    margin-top: 10px;
+    margin-bottom: 40px;
+    font-size: 40px;
+}
+
+.wrap-card-testimony{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.card-testimony{
+    margin: 10px;
+    font-family: 'Inter', sans-serif;
+    border-radius: 20px;
+    background-color: #F6F6F6;
+    width: 320px;
+    padding: 20px;
+    box-sizing: border-box;
+    color: #272D38;
+}
+.card-testimony img{
+    margin-bottom: 10px;
+}
+.card-testimony h5{
+    margin-bottom: 10px;
+    font-size: 19px;
+}
+
+@media screen and (max-width: 768px) {
+    .card-testimony{
+        margin: 20px 10px;
+    }
+}
+@media screen and (max-width: 425px) {
+    .card-testimony{
+        width: 90vw;
+        margin: 20px 0;
+    }
+}
+/* end Testimony */
+
+/* Contact */
+#contact{
+    font-family: 'Inter', sans-serif;
+    color: #272D38;
+    padding-top: 40px;
+    padding-bottom: 50px;
+}
+#contact article{
+    border-radius: 15px;
+    background-color: #F6F6F6;
+    width:  min-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding: 0 30px;
+    box-sizing: border-box;
+}
+.content-contact{
+    margin-left: 40px;
+    width: 400px;
+}
+.content-contact h1{
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+.content-contact button{
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    margin-top: 30px;
+    padding: 14px 25px;
+    border: none;
+    background-color: #8EADD5;
+    color: white;
+    border-radius: 10px;
+}
+
+@media screen and (max-width: 1024px) {
+    #contact article img{
+        width: 300px;
+    }
+    .content-contact{
+        width: 300px;
+    }
+}
+@media screen and (max-width: 768px) {
+    .content-contact h1 {
+        font-size: 30px;
+    }
+}
+@media screen and (max-width: 768px) {
+    #contact article{
+        padding: 20px 15px;
+        flex-wrap: wrap;
+    }
+    .content-contact{
+        margin-left: 0;
+        width: 85vw;
+    }
+}
+/* end Contact */
+
+/* Footer */
+footer{
+    font-family: 'Inter', sans-serif;
+    background-color: #F6F6F6;
+    padding-top: 60px;
+}
+
+.content-footer{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+.content-footer p {
+    text-align: left;
+    font-size: 18px;
+    color: #272D38;
+}
+.content-footer aside ul li {
+    list-style: none;
+    margin-bottom: 15px;
+}
+
+footer p {
+    padding: 20px 0;
+    text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+    .content-footer{
+        padding: 0 20px;
+    }
+    .content-footer aside{
+        margin-right: 20px;
+    }
+}
+/* end Footer */
