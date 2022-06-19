@@ -110,8 +110,13 @@ nav h2 {
     }
     .list-nav-mobile li {
         font-family: 'Inter', sans-serif;
+        color: #272D38;
         list-style: none;
         margin: 10px 0;
+    }
+    .list-nav-mobile li a {
+        color: #272D38;
+        text-decoration: none;
     }
     .bg-list-nav-mobile{
         display: block;
