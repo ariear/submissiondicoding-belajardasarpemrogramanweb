@@ -163,6 +163,18 @@ nav h2 {
     background-color: #8EADD5;
     color: white;
     border-radius: 10px;
+    cursor: pointer;
+    transition: .2s all ease;
+}
+.left-main-container button:hover{
+    transform: scale(0.95);
+}
+.left-main-container button:active{
+    transform: scale(0.9);
+}
+.left-main-container button:focus{
+    border: 1px solid;
+    border-color: #2f6bb9;
 }
 .right-main-container img{
     width: 450px;
@@ -246,6 +258,12 @@ nav h2 {
     justify-content: space-evenly;
     border-radius: 15px;
 }
+#trusted .trusted-logo img {
+    transition: .2s all ease;
+}
+#trusted .trusted-logo img:hover {
+    transform: scale(1.08);
+}
 @media screen and (max-width: 768px) {
     #trusted .trusted-logo{
         width: 95vw;
@@ -254,6 +272,9 @@ nav h2 {
 /* end truested */
 
 /* services */
+#services {
+    position: relative;
+}
 #services h1{
     font-family: 'Inter', sans-serif;
     font-weight: 700;
@@ -272,16 +293,27 @@ nav h2 {
 .child-services-content{
     width: 470px;
 }
+.child-services-content:hover img{
+    transform: translateX(20px);
+}
+.child-services-content:hover h2{
+    transform: translateY(10px);
+}
+.child-services-content img{
+    transition: .2s all ease;
+}
 .child-services-content h2{
     color: #272D38;
     font-size: 45px;
     margin-bottom: 30px;
+    transition: .3s all ease;
 }
 .child-services-content p {
     margin-bottom: 30px;
 }
 .child-services-image img{
     width: 450px;
+    position: relative;
 }
 @media screen and (min-width: 1441px) {
     .child-services-content{
@@ -324,6 +356,19 @@ nav h2 {
         font-size: 35px;
     }
 }
+
+.services-gradient{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto 0;
+    width: 400px;
+    height: 350px;
+    background: conic-gradient(from 180deg at 50% 50%, #2f6bb9 0deg , rgba(196,196,196,0) 360deg);
+    opacity: 0.5;
+    filter: blur(80px);
+}
 /* end services */
 
 /* Testimony */
@@ -353,6 +398,10 @@ nav h2 {
     padding: 20px;
     box-sizing: border-box;
     color: #272D38;
+    transition: .2s all ease;
+}
+.card-testimony:hover{
+    transform: scale(1.04);
 }
 .card-testimony img{
     margin-bottom: 10px;
@@ -410,6 +459,18 @@ nav h2 {
     background-color: #8EADD5;
     color: white;
     border-radius: 10px;
+    cursor: pointer;
+    transition: .2s all ease;
+}
+.content-contact button:hover{
+    transform: scale(0.95);
+}
+.content-contact button:active{
+    transform: scale(0.9);
+}
+.content-contact button:focus{
+    border: 1px solid;
+    border-color: #2f6bb9;
 }
 
 @media screen and (max-width: 1024px) {
@@ -436,6 +497,114 @@ nav h2 {
     }
 }
 /* end Contact */
+
+
+/* Suggestion */
+.sugestion{
+    font-family: 'Inter', sans-serif;
+    color: #272D38;
+    background-color: #F6F6F6;
+    width: 1280px;
+    margin: auto;
+    border-radius: 15px;
+    padding: 20px 40px;
+    box-sizing: border-box;
+    margin-bottom: 50px;
+}
+.sugestion h1{
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+.sugestion-content{
+    font-family: 'Inter', sans-serif;
+    margin-bottom: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.sugestion-form{
+    width: 400px;
+}
+.sugestion-form div{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+.sugestion-form label {
+    margin-bottom: 10px;
+}
+.sugestion-form input {
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 1px solid;
+}
+.sugestion-form textarea {
+    border-radius: 10px;
+}
+.sugestion-form button{
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    padding: 14px 35px;
+    border: none;
+    background-color: #8EADD5;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .2s all ease;
+}
+.sugestion-form button:hover{
+    transform: scale(0.95);
+}
+.sugestion-form button:active{
+    transform: scale(0.9);
+}
+.sugestion-biodata h3{
+    text-align: center;
+    margin-bottom: 20px;
+}
+.suges-img{
+    width: max-content;
+    margin: auto;
+}
+.sugestion-biodata img{
+    width: 200px;
+    margin-bottom: 20px;
+}
+.sugestion-biodata p {
+    margin-bottom: 10px;
+}
+@media screen and (min-width: 1280px) {
+    .sugestion{
+        width: 1280px;
+    }
+}
+@media screen and (min-width: 1024px) {
+    .sugestion{
+        width: 90vw;
+    }
+}
+@media screen and (max-width: 768px) {
+    .sugestion{
+        width: 90vw;
+    }
+    .sugestion-content{
+        flex-wrap: wrap-reverse;
+        justify-content: center;
+    }
+    .sugestion-biodata{
+        margin-bottom: 30px;
+    }
+}
+@media screen and (max-width: 640px) {
+    .sugestion{
+        padding: 20px 15px;
+    }
+    .sugestion h1 {
+        font-size: 25px;
+    }
+}
+/* end Suggestion */
 
 /* Footer */
 footer{
